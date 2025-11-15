@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Contact — Kingdom City Foundation</title>
+    <link rel="icon" type="image/x-icon" href="Favicon/favicon1.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="logo" />
+          <div class="brand-text">
+            <h1>Kingdom City Foundation</h1>
+            <small>Hope • Care • Future</small>
+          </div>
+        </a>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Programs</a></li>
+            <li><a href="blog.html">Stories</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="donate.html" class="btn-cta">Donate</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          id="navToggle5"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="container contact-page">
+      <section class="contact-hero grid-2">
+        <div class="contact-info">
+          <h2>Get in touch</h2>
+          <p class="lead">
+            Questions, partnership offers or volunteer interest — we'd love to
+            hear from you.
+          </p>
+
+          <div class="info-card">
+            <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=1"
+              alt="contact person"
+            />
+            <div>
+              <h4>Front Desk — Natasha</h4>
+              <p><strong>Email:</strong> kingdomcityfoundation.org@gmail.com</p>
+              <p><strong>Phone:</strong> +1242-322-2343</p>
+            </div>
+          </div>
+
+          <h3>Send us a message</h3>
+          <form
+            action="https://formspree.io/f/mqawzjkb"
+            method="post"
+            id="contactForm"
+            class="contact-form"
+            novalidate
+            autocomplete="on"
+          >
+            <label>
+              Full name
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Your full name"
+              />
+            </label>
+
+            <label>
+              Email
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="you@example.com"
+              />
+            </label>
+
+            <label>
+              Message
+              <textarea
+                name="message"
+                rows="5"
+                required
+                placeholder="Write your message..."
+              ></textarea>
+            </label>
+            <label for="file">Attach a File (optional)</label>
+            <input type="file" id="file" name="file" />
+
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+
+        <div class="map-area">
+          <h3>Visit Us</h3>
+          <p>Office visits by appointment—please call ahead.</p>
+
+          <div class="map-embed">
+            <iframe
+              title="Kingdom City Foundation map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63380.122838603704!2d7.335840538667871!3d6.859689706334947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044e87d972d23d3%3A0x9c5e49d6a945a261!2sNsukka%2C%20Enugu!5e0!3m2!1sen!2sng!4v1763224637213!5m2!1sen!2sng"
+              width="100%"
+              height="320"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <div class="map-extras">
+            <p>
+              <strong>Address:</strong> Bethel Church Avenue Nzukka, Stapledon
+              Gardens
+            </p>
+            <p><strong>Hours:</strong> Mon — Fri, 9:00am — 5:00pm</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-col about">
+          <h4>About Kingdom City Foundation</h4>
+          <p>
+            We provide long-term care and community programs <br />that empower
+            children to build better futures.We are committed <br />to creating
+            a world where every child has access to love, care, <br />education,
+            and the opportunity to reach their full potential.
+          </p>
+        </div>
+        <div class="footer-col links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contact">
+          <h4>Contact</h4>
+          <p>kingdomcityfoundation.org@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <small
+            >© <span id="year5"></span> Kingdom City Foundation — All rights
+            reserved.</small
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
